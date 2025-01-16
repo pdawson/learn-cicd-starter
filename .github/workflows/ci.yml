@@ -42,8 +42,8 @@ jobs:
       - name: Check for Formatting Issues
         run: test -z $(go fmt ./...)
 
-      - name: Static Analysis
+      - name: staticcheck
         run: staticcheck ./...
 
-      - name: Security Checks
+      - name: gosec
         run: gosec ./...
